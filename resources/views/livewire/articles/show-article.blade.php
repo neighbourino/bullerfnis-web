@@ -109,6 +109,8 @@
             </div>
 
             <div class="p-6 border max-w-4xl rounded mt-12">
+
+                <p>Locale: {{ app()->getLocale() }}</p>
                 <livewire:comments :model="$article" />
             </div>
         </div>
