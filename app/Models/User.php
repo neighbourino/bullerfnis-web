@@ -10,8 +10,13 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
+use App\Traits\HasGravatar;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
+use Spatie\Comments\Models\Concerns\InteractsWithComments;
+use Spatie\Comments\Models\Concerns\Interfaces\CanComment;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser, CanComment
 {
     use HasApiTokens;
 
@@ -21,6 +26,8 @@ class User extends Authenticatable
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasGravatar;
+    use InteractsWithComments;
 
     /**
      * The attributes that are mass assignable.
@@ -65,5 +72,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return ($this->email == 'janus.helkjaer@gmail.com');
     }
 }

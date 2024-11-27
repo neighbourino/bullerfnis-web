@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Spatie\Comments\Notifications\ApprovedCommentNotification;
 use Spatie\Comments\Notifications\PendingCommentNotification;
 use Spatie\Comments\Actions\SendNotificationsForApprovedCommentAction;
@@ -62,7 +63,7 @@ return [
          * The class that will comment on other things. Typically, this
          * would be a user model.
          */
-        'commentator' => null,
+        'commentator' => User::class,
 
         /*
          * The field to use to display the name from the commentator model.
@@ -153,4 +154,8 @@ return [
          */
         'default_image' => 'mp',
     ],
+
+    'mentions' => [
+        'enabled' => true,
+    ]
 ];

@@ -18,6 +18,8 @@
     <!-- Styles -->
     @livewireStyles
     @fluxStyles
+
+    @laravelCommentsLivewireStyles
 </head>
 
 <body class="min-h-screen bg-white dark:bg-zinc-800">
@@ -26,13 +28,14 @@
         <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
 
         <flux:brand href="#" logo="{{ asset('images/logo.png') }}" name="{{ config('app.name', 'Laravel') }}"
-            class="max-lg:hidden dark:hidden" />
+            class="max-lg:hidden dark:hidden" href="/" />
         <flux:brand href="#" logo="{{ asset('images/dark-mode-logo.png') }}"
-            name="{{ config('app.name', 'Laravel') }}" class="max-lg:!hidden hidden dark:flex" />
+            name="{{ config('app.name', 'Laravel') }}" class="max-lg:!hidden hidden dark:flex" href="/" />
 
         <flux:navbar class="-mb-px max-lg:hidden">
-            <flux:navbar.item icon="home" href="{{ route('dashboard') }}" current>Hjem</flux:navbar.item>
-            <flux:navbar.item icon="inbox" badge="12" href="#">Artikler</flux:navbar.item>
+            <flux:navbar.item icon="home" href="{{ route('welcome') }}">Hjem</flux:navbar.item>
+            <flux:navbar.item icon="inbox" badge="12" href="{{ route('articles.index') }}">Artikler
+            </flux:navbar.item>
             <flux:navbar.item icon="message-circle-heart" href="#">Forum</flux:navbar.item>
             <flux:navbar.item icon="calendar" href="#">Shop</flux:navbar.item>
 
@@ -119,16 +122,6 @@
     </flux:sidebar>
 
     <flux:main>
-        @if (isset($page_heading))
-            <flux:heading size="xl" level="1">{{ $page_heading }}</flux:heading>
-
-            @if (isset($page_subheading))
-                <flux:subheading size="lg">{{ $page_subheading }}</flux:subheading>
-            @endif
-
-            <flux:separator variant="subtle" class="mt-6" />
-        @endif
-
         {{ $slot }}
     </flux:main>
 
@@ -137,6 +130,7 @@
 
     @livewireScripts
     @fluxScripts
+    @laravelCommentsLivewireScripts
 </body>
 
 </html>
