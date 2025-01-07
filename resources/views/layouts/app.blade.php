@@ -55,6 +55,8 @@
         <flux:spacer />
 
         <flux:navbar class="mr-4">
+            <flux:button x-on:click="$flux.dark = ! $flux.dark" icon="moon" variant="subtle"
+                aria-label="Toggle dark mode" />
             <flux:navbar.item icon="magnifying-glass" href="#" label="Search" />
             <flux:navbar.item class="max-lg:hidden" icon="cog-6-tooth" href="#" label="Settings" />
             <flux:navbar.item class="max-lg:hidden" icon="information-circle" href="#" label="Help" />
