@@ -1,14 +1,18 @@
 <x-app-layout>
-    <div
-        class="flex gap-4 max-sm:flex-col items-center justify-center text-center bg-yellow-300 text-black px-6 py-3 rounded font-[sans-serif] -mt-8 -mx-8">
-        <p class="text-xs">Limited Time Offer: Get 20% Off!</p>
 
-        <div class="flex gap-2">
-            <button type="button" class="bg-white text-black py-1.5 px-3 rounded text-xs hover:underline">
-                Learn More
-            </button>
+    @if (1 == 2)
+        <div
+            class="flex gap-4 max-sm:flex-col items-center justify-center text-center bg-yellow-300 text-black px-6 py-3 rounded font-[sans-serif] -mt-8 -mx-8">
+            <p class="text-xs">Limited Time Offer: Get 20% Off!</p>
+
+            <div class="flex gap-2">
+                <button type="button" class="bg-white text-black py-1.5 px-3 rounded text-xs hover:underline">
+                    Learn More
+                </button>
+            </div>
         </div>
-    </div>
+    @endif
+
     <div class="bg-white py-6">
         <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
             <div class="flex flex-row flex-wrap">

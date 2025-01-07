@@ -36,6 +36,7 @@
             <flux:navbar.item icon="home" href="{{ route('welcome') }}">Hjem</flux:navbar.item>
             <flux:navbar.item icon="inbox" badge="12" href="{{ route('articles.index') }}">Artikler
             </flux:navbar.item>
+            <flux:navbar.item icon="utensils" href="#">Opskrifter</flux:navbar.item>
             <flux:navbar.item icon="message-circle-heart" href="#">Forum</flux:navbar.item>
             <flux:navbar.item icon="calendar" href="#">Shop</flux:navbar.item>
 

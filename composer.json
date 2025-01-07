@@ -11,6 +11,7 @@
     "require": {
         "php": "^8.2",
         "blade-ui-kit/blade-icons": "^1.7",
+        "echolabsdev/prism": "^0.23.0",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.31",
         "laravel/jetstream": "^5.3",

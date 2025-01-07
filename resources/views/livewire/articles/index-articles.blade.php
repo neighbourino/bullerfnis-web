@@ -1,4 +1,13 @@
 <div>
+    <div class="pb-3 border-b border-gray-100 mb-6">
+        <flux:breadcrumbs>
+            <flux:breadcrumbs.item href="{{ route('welcome') }}">Hjem</flux:breadcrumbs.item>
+            <flux:breadcrumbs.item href="{{ route('articles.index') }}">Artikler</flux:breadcrumbs.item>
+        </flux:breadcrumbs>
+
+
+    </div>
+
     <div class="flex max-md:flex-col items-start">
         <div class="w-full md:w-[220px] pb-4 mr-10 bg-slate-50 p-3 rounded">
             <flux:checkbox.group wire:model="notifications" label="Notifications">
@@ -13,6 +22,9 @@
         <flux:separator class="md:hidden" />
 
         <div class="flex-1 max-md:pt-6 self-stretch">
+
+
+
             <div class="mx-auto max-w-2xl text-center">
                 <h2 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Artikler
                 </h2>
