@@ -1,19 +1,167 @@
 <x-app-layout>
 
-    @if (1 == 2)
-        <div
-            class="flex gap-4 max-sm:flex-col items-center justify-center text-center bg-yellow-300 text-black px-6 py-3 rounded font-[sans-serif] -mt-8 -mx-8">
-            <p class="text-xs">Limited Time Offer: Get 20% Off!</p>
+    @if (1 == 1)
+        <div class="mx-auto max-w-2xl  lg:max-w-7xl px-12 py-3">
+            <div
+                class="flex gap-4 max-sm:flex-col items-center justify-center text-center bg-yellow-300 text-black px-6 py-3 rounded font-[sans-serif] -mt-8 -mx-8">
+                <p class="text-xs">Limited Time Offer: Get 20% Off!</p>
 
-            <div class="flex gap-2">
-                <button type="button" class="bg-white text-black py-1.5 px-3 rounded text-xs hover:underline">
-                    Learn More
-                </button>
+                <div class="flex gap-2">
+                    <button type="button" class="bg-white text-black py-1.5 px-3 rounded text-xs hover:underline">
+                        Learn More
+                    </button>
+                </div>
             </div>
         </div>
     @endif
 
-    <div class="bg-white py-6">
+    <!-- hero tests 003 -->
+
+
+
+
+    <!-- hero tests 003 END -->
+
+    <!-- hero tests 002 -->
+
+
+
+
+    <!-- hero tests 002 END -->
+
+    <!-- hero tests 001 -->
+
+    <div class="-mx-8">
+        <div class="mx-auto max-w-2xl  lg:max-w-7xl">
+            <div class="relative overflow-hidden rounded-lg lg:h-96 border border-slate-100 shadow-lg">
+                <div class="absolute inset-0">
+                    <img src="{{ asset('images/placeholder/young-multiracial-families-having-fun-playing-with-2024-07-03-02-44-02-utc.jpg') }}"
+                        alt="" class="size-full object-cover">
+                </div>
+                <div aria-hidden="true" class="relative h-96 w-full lg:hidden"></div>
+                <div aria-hidden="true" class="relative h-32 w-full lg:hidden"></div>
+                <div
+                    class="absolute inset-x-0 bottom-0 rounded-bl-lg rounded-br-lg bg-black/50 p-6 backdrop-blur-sm backdrop-filter sm:flex sm:items-center sm:justify-between lg:inset-x-auto lg:inset-y-0 lg:w-96 lg:flex-col lg:items-start lg:rounded-br-none lg:rounded-tl-lg">
+                    <div>
+                        <h2 class="text-xl font-bold text-white">Workspace Collection</h2>
+                        <p class="mt-1 text-sm text-gray-300">Upgrade your desk with objects that keep you organized and
+                            clear-minded.</p>
+                    </div>
+                    <a href="#"
+                        class="mt-6 flex shrink-0 items-center justify-center rounded-md border border-white/25 px-4 py-3 text-base font-medium text-white hover:bg-white/10 sm:ml-8 sm:mt-0 lg:ml-0 lg:w-full">View
+                        the collection</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-12">
+        <div class="mx-auto max-w-7xl">
+
+            <div class="grid grid-cols-4 space-x-3 ">
+
+                @for ($i = 0; $i < 4; $i++)
+                    <flux:card class="space-y-6 bg-yellow-50">
+                        <div>
+                            <flux:heading size="lg">Log in to your account</flux:heading>
+                            <flux:subheading>Welcome back!</flux:subheading>
+                        </div>
+
+
+
+                        <div class="space-y-2">
+                            <flux:button variant="primary" class="w-full">Log in</flux:button>
+
+                            <flux:button variant="ghost" class="w-full">Sign up for a new account</flux:button>
+                        </div>
+                    </flux:card>
+                @endfor
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="">
+        <div class="mx-auto max-w-7xl">
+
+
+            <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
+                <div class="group relative aspect-[2/1] overflow-hidden rounded-lg sm:row-span-2 sm:aspect-square">
+                    <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-featured-category.jpg"
+                        alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee."
+                        class="absolute size-full object-cover group-hover:opacity-75">
+                    <div aria-hidden="true"
+                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                    <div class="absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="font-semibold text-white">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    New Arrivals
+                                </a>
+                            </h3>
+                            <p aria-hidden="true" class="mt-1 text-sm text-white">Shop now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative aspect-[2/1] overflow-hidden rounded-lg sm:aspect-auto">
+                    <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-category-01.jpg"
+                        alt="Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters."
+                        class="absolute size-full object-cover group-hover:opacity-75">
+                    <div aria-hidden="true"
+                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                    <div class="absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="font-semibold text-white">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    Accessories
+                                </a>
+                            </h3>
+                            <p aria-hidden="true" class="mt-1 text-sm text-white">Shop now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative aspect-[2/1] overflow-hidden rounded-lg sm:aspect-auto">
+                    <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-category-02.jpg"
+                        alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk."
+                        class="absolute size-full object-cover group-hover:opacity-75">
+                    <div aria-hidden="true"
+                        class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                    <div class="absolute inset-0 flex items-end p-6">
+                        <div>
+                            <h3 class="font-semibold text-white">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    Workspace
+                                </a>
+                            </h3>
+                            <p aria-hidden="true" class="mt-1 text-sm text-white">Shop now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 sm:hidden">
+                <a href="#" class="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+                    Browse all categories
+                    <span aria-hidden="true"> &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- hero tests 001 END -->
+
+
+
+
+
+    <div class="bg-white py-6 mt-24">
         <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
             <div class="flex flex-row flex-wrap">
                 <!--Start left cover-->
@@ -117,7 +265,8 @@
                                     </a>
                                     <div class="pt-1">
                                         <div class="text-gray-100">
-                                            <div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Lifestyle
+                                            <div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>
+                                            Lifestyle
                                         </div>
                                     </div>
                                 </div>
@@ -131,133 +280,9 @@
 
     <div class="p-1 flex flex-wrap items-center justify-center">
 
-        <div class="flex-shrink-0 m-6 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg">
-            <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none"
-                style="transform: scale(1.5); opacity: 0.1;">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)"
-                    fill="white" />
-            </svg>
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-                <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                    style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
-                </div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="">
-            </div>
-            <div class="relative text-white px-6 pb-6 mt-6">
-                <span class="block opacity-75 -mb-1">Indoor</span>
-                <div class="flex justify-between">
-                    <span class="block font-semibold text-xl">Peace Lily</span>
-                    <span
-                        class="block bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$36.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="flex-shrink-0 m-6 relative overflow-hidden bg-teal-500 rounded-lg max-w-xs shadow-lg">
-            <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none"
-                style="transform: scale(1.5); opacity: 0.1;">
-                <rect x="159.52" y="175" width="152" height="152" rx="8"
-                    transform="rotate(-45 159.52 175)" fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)"
-                    fill="white" />
-            </svg>
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-                <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                    style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
-                </div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069998-305de300-cc9a-11e9-8ae7-5a0fe00299f2.png"
-                    alt="">
-            </div>
-            <div class="relative text-white px-6 pb-6 mt-6">
-                <span class="block opacity-75 -mb-1">Outdoor</span>
-                <div class="flex justify-between">
-                    <span class="block font-semibold text-xl">Monstera</span>
-                    <span
-                        class="block bg-white rounded-full text-teal-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$45.00</span>
-                </div>
-            </div>
-        </div>
-        <div class="flex-shrink-0 m-6 relative overflow-hidden bg-purple-500 rounded-lg max-w-xs shadow-lg">
-            <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none"
-                style="transform: scale(1.5); opacity: 0.1;">
-                <rect x="159.52" y="175" width="152" height="152" rx="8"
-                    transform="rotate(-45 159.52 175)" fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)"
-                    fill="white" />
-            </svg>
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-                <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                    style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
-                </div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="">
-            </div>
-            <div class="relative text-white px-6 pb-6 mt-6">
-                <span class="block opacity-75 -mb-1">Outdoor</span>
-                <div class="flex justify-between">
-                    <span class="block font-semibold text-xl">Oak Tree</span>
-                    <span
-                        class="block bg-white rounded-full text-purple-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$68.50</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="flex-shrink-0 m-6 relative overflow-hidden bg-purple-500 rounded-lg max-w-xs shadow-lg">
-            <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none"
-                style="transform: scale(1.5); opacity: 0.1;">
-                <rect x="159.52" y="175" width="152" height="152" rx="8"
-                    transform="rotate(-45 159.52 175)" fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)"
-                    fill="white" />
-            </svg>
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-                <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                    style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
-                </div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="">
-            </div>
-            <div class="relative text-white px-6 pb-6 mt-6">
-                <span class="block opacity-75 -mb-1">Outdoor</span>
-                <div class="flex justify-between">
-                    <span class="block font-semibold text-xl">Oak Tree</span>
-                    <span
-                        class="block bg-white rounded-full text-purple-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$68.50</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="flex-shrink-0 m-6 relative overflow-hidden bg-purple-500 rounded-lg max-w-xs shadow-lg">
-            <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none"
-                style="transform: scale(1.5); opacity: 0.1;">
-                <rect x="159.52" y="175" width="152" height="152" rx="8"
-                    transform="rotate(-45 159.52 175)" fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)"
-                    fill="white" />
-            </svg>
-            <div class="relative pt-10 px-10 flex items-center justify-center">
-                <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
-                    style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
-                </div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="">
-            </div>
-            <div class="relative text-white px-6 pb-6 mt-6">
-                <span class="block opacity-75 -mb-1">Outdoor</span>
-                <div class="flex justify-between">
-                    <span class="block font-semibold text-xl">Oak Tree</span>
-                    <span
-                        class="block bg-white rounded-full text-purple-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$68.50</span>
-                </div>
-            </div>
-        </div>
+
 
         <div class="bg-white">
             <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
@@ -413,58 +438,6 @@
             </div>
         </div>
 
-        <div class="bg-gray-100 px-6 py-12 font-sans -mx-8">
-            <div class="lg:max-w-7xl max-w-lg mx-auto px-6 py-8 bg-white rounded-lg shadow-md">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <div class="max-h-80">
-                        <img src="https://readymadeui.com/management-img.webp" alt="Image"
-                            class="rounded-md object-cover w-full h-full" />
-                    </div>
-                    <div>
-                        <h2 class="text-3xl font-extrabold text-purple-700 mb-4">Immerse Yourself in Creativity</h2>
-                        <p class="text-gray-600 text-sm leading-6">
-                            Unleash your imagination and explore a world of endless possibilities. Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-                            magna
-                            aliqua.
-                        </p>
-                        <ul class="list-disc text-sm text-gray-600 space-y-2 pl-4 mt-6">
-                            <li>Discover innovative ideas.</li>
-                            <li>Create unique projects.</li>
-                            <li>Collaborate with like-minded individuals.</li>
-                            <li>Transform your visions into reality.</li>
-                        </ul>
-                        <div class="mt-6">
-                            <a href="javascript:void(0);"
-                                class="text-purple-600 text-sm font-semibold hover:underline">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="bg-white py-6">
-            <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    <flux:card>
-
-                        <div role="status" class="max-w-sm animate-pulse">
-                            <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-                            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-                            <span class="sr-only">Loading...</span>
-                        </div>
-
-
-                    </flux:card>
-                </div>
-            </div>
-        </div>
-
         <div class="bg-white py-24 sm:py-32">
             <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
                 <h2 class="text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
@@ -575,4 +548,63 @@
             </div>
         </div>
 
+
+        <!-- blog -->
+
+        <div class="py-24 sm:py-32 w-full">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl text-center">
+                    <h2 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">From the
+                        blog</h2>
+                    <p class="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with our expert advice.</p>
+                </div>
+                <div
+                    class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                    <article class="flex flex-col items-start justify-between">
+                        <div class="relative w-full">
+                            <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
+                                alt=""
+                                class="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                            <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        </div>
+                        <div class="max-w-xl">
+                            <div class="mt-8 flex items-center gap-x-4 text-xs">
+                                <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
+                                <a href="#"
+                                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+                            </div>
+                            <div class="group relative">
+                                <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                                    <a href="#">
+                                        <span class="absolute inset-0"></span>
+                                        Boost your conversion rate
+                                    </a>
+                                </h3>
+                                <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Illo sint voluptas. Error
+                                    voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo
+                                    necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel.
+                                    Iusto corrupti dicta.</p>
+                            </div>
+                            <div class="relative mt-8 flex items-center gap-x-4">
+                                <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="" class="size-10 rounded-full bg-gray-100">
+                                <div class="text-sm/6">
+                                    <p class="font-semibold text-gray-900">
+                                        <a href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Michael Foster
+                                        </a>
+                                    </p>
+                                    <p class="text-gray-600">Co-Founder / CTO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- More posts... -->
+                </div>
+            </div>
+        </div>
+
+        <!-- blog END -->
 </x-app-layout>

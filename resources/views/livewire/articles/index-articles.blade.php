@@ -8,6 +8,7 @@
 
     </div>
 
+
     <div class="flex max-md:flex-col items-start">
         <div class="w-full md:w-[220px] pb-4 mr-10 bg-slate-50 p-3 rounded">
             <flux:checkbox.group wire:model="notifications" label="Notifications">
