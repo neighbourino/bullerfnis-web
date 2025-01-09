@@ -14,7 +14,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                serif: ['Spectral', ...defaultTheme.fontFamily.serif],
+                display: ['Love Ya Like A Sister', ...defaultTheme.fontFamily.serif],
             },
         },
     },
