@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class RecipeResource extends Resource
 {
@@ -30,8 +31,8 @@ class RecipeResource extends Resource
                 Forms\Components\TextInput::make('ingredients'),
                 Forms\Components\Textarea::make('content')
                     ->columnSpanFull(),
-                Forms\Components\FileUpload::make('image')
-                    ->image(),
+                SpatieMediaLibraryFileUpload::make('featured_image')
+                    ->collection('recipes'),
                 Forms\Components\TextInput::make('user_id')
                     ->required()
                     ->default(1)

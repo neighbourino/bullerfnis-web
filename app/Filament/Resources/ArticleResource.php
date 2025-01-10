@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class ArticleResource extends Resource
 {
@@ -37,6 +38,8 @@ class ArticleResource extends Resource
                 Forms\Components\TextInput::make('content'),
                 Forms\Components\TextInput::make('slug')
                     ->maxLength(255),
+                SpatieMediaLibraryFileUpload::make('featured_image')
+                    ->collection('articles'),
                 Forms\Components\TextInput::make('author_id')
                     ->maxLength(255),
             ]);

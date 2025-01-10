@@ -1,4 +1,14 @@
 <div>
+    @php
+        $mediaItems = $article->getMedia('articles');
+        $publicFullUrl = isset($mediaItems[0]) ? $mediaItems[0]->getFullUrl() : '';
+
+    @endphp
+    <div class="-mx-8 -mt-8 z-30 relative">
+        <div>
+            <img class="h-32 w-full object-cover lg:h-48" src="{{ $publicFullUrl }}" alt="{{ $article->title }}">
+        </div>
+    </div>
 
     <div class="pb-3 border-b border-gray-100 mb-6">
         <flux:breadcrumbs>

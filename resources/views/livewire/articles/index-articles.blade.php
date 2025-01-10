@@ -46,11 +46,15 @@
                     @if ($articles)
 
                         @foreach ($articles as $article)
+                            @php
+                                $mediaItems = $article->getMedia('articles');
+                                $publicFullUrl = isset($mediaItems[0]) ? $mediaItems[0]->getFullUrl() : '';
+
+                            @endphp
                             <article class="flex flex-col items-start justify-between">
                                 <a class="relative w-full block hover:opacity-75 transition-opacity duration-300 overflow-hidden"
                                     href="{{ route('articles.show', $article) }}">
-                                    <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-                                        alt=""
+                                    <img src="{{ $publicFullUrl }}" alt="{{ $article->title }}"
                                         class="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
                                     <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
                                 </a>
