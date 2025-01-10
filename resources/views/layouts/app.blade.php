@@ -52,24 +52,26 @@
 
     <div class="relative">
         <flux:header sticky
-            class="bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-700 z-50 max-w-7xl mx-auto w-full border-b rounded-b  border-l border-r shadow-sm ">
+            class="bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-700 z-20  w-full border-b rounded-b  border-l border-r shadow-sm ">
             <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left" />
 
+            <div class="max-w-7xl mx-auto flex justify-between items-center px-6 w-full">
 
-            {{-- <flux:brand href="#" logo="{{ asset('images/logo.png') }}" name="{{ config('app.name', 'Laravel') }}"
+
+                {{-- <flux:brand href="#" logo="{{ asset('images/logo.png') }}" name="{{ config('app.name', 'Laravel') }}"
             class="max-lg:hidden dark:hidden" href="/" />
         <flux:brand href="#" logo="{{ asset('images/dark-mode-logo.png') }}"
             name="{{ config('app.name', 'Laravel') }}" class="max-lg:!hidden hidden dark:flex" href="/" /> --}}
 
-            <flux:navbar class="-mb-px max-lg:hidden">
-                <flux:navbar.item href="{{ route('welcome') }}">Hjem</flux:navbar.item>
-                {{-- <flux:navbar.item href="{{ route('articles.index') }}">Artikler
-                </flux:navbar.item>
-                <flux:navbar.item href="{{ route('recipes.index') }}">Opskrifter</flux:navbar.item> --}}
-                {{-- <flux:navbar.item href="#">Forum</flux:navbar.item>
-                <flux:navbar.item href="#">Shop</flux:navbar.item> --}}
+                <flux:navbar class="-mb-px max-lg:hidden">
+                    <flux:navbar.item href="{{ route('welcome') }}">Hjem</flux:navbar.item>
+                    <flux:navbar.item href="{{ route('articles.index') }}">Artikler
+                    </flux:navbar.item>
+                    <flux:navbar.item href="{{ route('recipes.index') }}">Opskrifter</flux:navbar.item>
+                    {{-- <flux:navbar.item href="#">Forum</flux:navbar.item>
+                <flux:navbar.item href="#">Shop</flux:navbar.item>
 
-                {{-- <flux:separator vertical variant="subtle" class="my-2" />
+                    {{-- <flux:separator vertical variant="subtle" class="my-2" />
 
             <flux:dropdown class="max-lg:hidden">
                 <flux:navbar.item icon-trailing="chevron-down">Favorites</flux:navbar.item>
@@ -80,11 +82,11 @@
                     <flux:navmenu.item href="#">Brand guidelines</flux:navmenu.item>
                 </flux:navmenu>
             </flux:dropdown> --}}
-            </flux:navbar>
+                </flux:navbar>
 
-            <flux:spacer />
+                <flux:spacer />
 
-            {{-- <flux:navbar class="mr-4">
+                {{-- <flux:navbar class="mr-4">
                 <flux:button x-data x-on:click="$flux.dark = !$flux.dark" icon="moon" variant="subtle"
                     aria-label="Toggle dark mode" />
                 <flux:navbar.item icon="magnifying-glass" href="#" label="Search" />
@@ -92,35 +94,36 @@
                 <flux:navbar.item class="max-lg:hidden" icon="information-circle" href="#" label="Help" />
             </flux:navbar> --}}
 
-            <flux:dropdown position="bottom" align="start">
-                @auth
-                    <flux:profile avatar="{{ Auth::user()->gravatar }}" name="" />
-                @else
-                    <flux:profile avatar="" name="Login" />
+                <flux:dropdown position="bottom" align="start">
+                    @auth
+                        <flux:profile avatar="{{ Auth::user()->gravatar }}" name="" />
+                    @else
+                        <flux:profile avatar="" name="Login" />
 
 
-                @endauth
+                    @endauth
 
-                <flux:menu>
-                    <flux:menu.item icon="user" href="{{ route('profile.show') }}">Profil
-                    </flux:menu.item>
-
-
-
-                    <flux:menu.separator />
-
-                    <form method="POST" action="{{ route('logout') }}" x-data>
-                        @csrf
-
-                        <flux:menu.item icon="arrow-right-start-on-rectangle" type="submit"
-                            href="{{ route('logout') }}" @click.prevent="$root.submit();">Log ud</flux:menu.item>
-                    </form>
+                    <flux:menu>
+                        <flux:menu.item icon="user" href="{{ route('profile.show') }}">Profil
+                        </flux:menu.item>
 
 
 
+                        <flux:menu.separator />
 
-                </flux:menu>
-            </flux:dropdown>
+                        <form method="POST" action="{{ route('logout') }}" x-data>
+                            @csrf
+
+                            <flux:menu.item icon="arrow-right-start-on-rectangle" type="submit"
+                                href="{{ route('logout') }}" @click.prevent="$root.submit();">Log ud</flux:menu.item>
+                        </form>
+
+
+
+
+                    </flux:menu>
+                </flux:dropdown>
+            </div>
         </flux:header>
 
         <flux:sidebar stashable sticky
